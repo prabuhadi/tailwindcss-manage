@@ -621,6 +621,18 @@ html {
   width: 4rem;
 }
 
+.w-1\/4{
+  width: 25%;
+}
+
+.w-1\/2{
+  width: 50%;
+}
+
+.w-3\/4{
+  width: 75%;
+}
+
 .max-w-md{
   max-width: 28rem;
 }
@@ -878,6 +890,11 @@ html {
   color: hsl(12 88% 59% / var(--tw-text-opacity));
 }
 
+.text-black{
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
 .shadow-2xl{
   --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
   --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
@@ -910,6 +927,54 @@ body {
   #cta {
     background-image: url("../img/bg-simplify-section-mobile.svg");
   }
+}
+
+/* Hamburger Menu */
+
+.hamburger {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  transition: all 0.25s;
+  position: relative;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background: #f3603d;
+  transform: rotate(0);
+  transition: all 0.3s;
+}
+
+.hamburger-middle {
+  transform: translateY(7px);
+}
+
+.hamburger-bottom {
+  transform: translateY(14px);
+}
+
+.open {
+  transform: rotate(90deg);
+  transform: translateY(0px);
+}
+
+.open .hamburger-top {
+  transform: rotate(45deg) translateY(6px) translate(6px);
+}
+
+.open .hamburger-middle {
+  display: none;
+}
+
+.open .hamburger-bottom {
+  transform: rotate(-45deg) translateY(6px) translate(-6px);
 }
 
 .hover\:bg-brightRedLight:hover{
@@ -1042,5 +1107,15 @@ body {
 @media (min-width: 1440px){
   .xl\:w-3\/4{
     width: 75%;
+  }
+
+  .xl\:w-1\/4{
+    width: 25%;
+  }
+
+  .xl\:space-y-6 > :not([hidden]) ~ :not([hidden]){
+    --tw-space-y-reverse: 0;
+    margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
   }
 }
