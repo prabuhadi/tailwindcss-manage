@@ -2,10 +2,6 @@
 module.exports = {
   content: ["./*.html"],
   theme: {
-    fontFamily: {
-      sans: ["Roboto", "sans-serif"],
-      heading: ["Roboto", "sans-serif"],
-    },
     screens: {
       sm: "480px",
       md: "768px",
@@ -13,6 +9,9 @@ module.exports = {
       xl: "1440px",
     },
     extend: {
+      fontFamily: {
+        rubik: ["Rubik", "sans-serif"],
+      },
       colors: {
         brightRed: "hsl(12,88%,59%)",
         brightRedLight: "hsl(12, 88%, 69%)",
