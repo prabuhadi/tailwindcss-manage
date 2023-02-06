@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./*.html"],
+  content: ["./index.html", "./src/*/.{js,jsx}"],
   theme: {
     screens: {
       sm: "480px",
@@ -11,6 +11,7 @@ module.exports = {
     extend: {
       fontFamily: {
         rubik: ["Rubik", "sans-serif"],
+        space: ["monoSpace", "sans-serif"],
       },
       colors: {
         brightRed: "hsl(12,88%,59%)",
@@ -24,5 +25,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("tw-elements/dist/plugin")],
 };
